@@ -1,16 +1,37 @@
-# flutter_application_1
+# School Management App (EduManager)
 
-A new Flutter project.
+## Description
 
-## Getting Started
+EduManager is a Flutter application for managing school students and teachers. It provides a complete authentication flow, a dashboard, and full CRUD (Create, Read, Update, Delete) operations for both students and teachers.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Authentication:** Sign-in, sign-up, and logout with session handling.
+- **Dashboard:** Home screen with quick-action cards for all major functions.
+- **Student Management:** Add, view, edit, and delete student records.
+- **Teacher Management:** Add, view, edit, and delete teacher records.
+- **Logout:** Secure sign-out that clears the navigation stack.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Architecture
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The project follows a **Feature-First Clean Architecture** approach. Shared code and reusable components live in `core/`, while each feature is organized into:
+- `data/` — Repositories and data access.
+- `domain/` — Models and business logic.
+- `presentation/` — Screens and UI widgets.
+
+## Tech Stack
+
+- Flutter
+- Dart
+
+## Current Limitations
+
+The app currently uses static, in-memory data and does not yet connect to a database. The repository pattern is already in place, making it ready for a future Firebase or SQLite integration without changing the UI.
+
+## How to Run
+
+From the project directory, run:
+
+```bash
+flutter pub get
+flutter run
